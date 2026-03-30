@@ -10,7 +10,6 @@ import numpy as np
 import copy
 from collections import defaultdict
 from torch.utils.data import DataLoader
-from model import RusMNIST, MyDataset
 
 
 class MyDataset(Dataset):
