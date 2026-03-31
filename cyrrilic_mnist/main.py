@@ -142,21 +142,6 @@ device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 
 
 model = RusMNIST().to(device)
-model.load_state_dict(torch.load(model_path))
-model.eval()
-
-it = iter(test_loader)
-images, labels = next(it)
-image = images[0].unsqueeze(0)
-image = image.to(device)
-
-with torch.no_grad():
-    output = model(image)
-    _, predicted = torch.max(output,1)
-print(f"True - {labels[0]}")
-print(f"Pred - {predicted.cpu().item()}")
-
-
 
 model.load_state_dict(torch.load(model_path))
 model.eval()
