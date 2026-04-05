@@ -3,7 +3,7 @@ import torch
 import time
 from common import build_model, transform, device
 
-model = build_model(pretrained=False) # Загрузит веса из model.pth
+model = build_model(pretrained=False)
 model.eval()
 
 cap = cv2.VideoCapture(1)
