@@ -15,7 +15,6 @@ transform = transforms.Compose([
 ])
 
 def build_model(pretrained=True):
-    # Используем B0, заменяем классификатор на один слой для стабильности на малых данных
     weights = torchvision.models.EfficientNet_B0_Weights.IMAGENET1K_V1 if pretrained else None
     model = torchvision.models.efficientnet_b0(weights=weights)
     
