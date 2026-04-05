@@ -40,7 +40,7 @@ while True:
         loss.backward()
         optimizer.step()
         print(f"Trained! Loss: {loss.item():.4f}")
-        torch.save(model.state_dict(), model_path) # Автосохранение
+        torch.save(model.state_dict(), model_path) 
         count_labeled = 0
 
 cap.release()
